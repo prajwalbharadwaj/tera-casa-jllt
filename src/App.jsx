@@ -1,7 +1,18 @@
-import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PropertyList from "./components/PropertyList.jsx";
+import PropertyDetail from "./pages/PropertyDetail.jsx";
 
 const App = () => {
-  return <div>App</div>;
+  const router = createBrowserRouter([
+    { index: true, element: <PropertyList /> },
+    { path: "/property/:id", element: <PropertyDetail /> }
+  ]);
+
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default App;

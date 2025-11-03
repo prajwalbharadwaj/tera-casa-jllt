@@ -1,0 +1,103 @@
+.property {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border: 1px solid #ccc;
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+  }
+}
+
+.propertyImage {
+  grid-column: 1 / span 12;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  @media (min-width: 769px) {
+    img {
+      flex-shrink: 0;
+      height: 100%;
+    }
+    grid-column: 1 / span 2;
+  }
+}
+
+.propertyContainer {
+  padding: 2rem;
+  grid-column: 1 / span 12;
+  @media (min-width: 769px) {
+    grid-column: 3 / span 9;
+    display: flex;
+  }
+}
+
+.propertyContent {
+  grid-column: 1 / span 12;
+  padding-bottom: 2rem;
+  display: grid;
+  gap: 0.75rem;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  @media (min-width: 769px) {
+    grid-column: 4 / span 6;
+    border-bottom: 0;
+    border-right: 1px solid #ccc;
+    padding-bottom: 0;
+    margin-right: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.propertyLocation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.propertyName {
+  font-weight: 500;
+}
+
+.propertyActions {
+  grid-column: 1 / span 12;
+  padding-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  @media (min-width: 769px) {
+    gap: 1rem;
+    grid-column: 10 / span 3;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.propertyActionsIcons {
+  grid-column: 1 / span 12;
+  display: flex;
+  gap: 2rem;
+  img {
+    width: 1.25rem;
+    height: 1.25rem;
+    &:hover {
+      fill: #e30613;
+    }
+  }
+}
+
+.propertyActionsStatus {
+  grid-column: 1 / span 6;
+  font-size: 0.875rem;
+  div {
+    display: flex;
+    gap: 0.5rem;
+  }
+  @media (min-width: 769px) {
+    div {
+      display: grid;
+    }
+  }
+}
