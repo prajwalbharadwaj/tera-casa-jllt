@@ -12,7 +12,7 @@ export const properties = [
     status: "Existing",
     office_space: "9 756 m²",
     favorite: false,
-    image: "office1"
+    image: "office-1.jpg"
   },
   {
     id: "b832c00c",
@@ -26,7 +26,7 @@ export const properties = [
     status: "Existing",
     office_space: "4 230 m²",
     favorite: false,
-    image: "office2"
+    image: "office-2.jpg"
   },
   {
     id: "9b6d5c65",
@@ -40,7 +40,7 @@ export const properties = [
     status: "Under construction",
     office_space: "6 197 m²",
     favorite: true,
-    image: "office3"
+    image: "office-3.jpg"
   },
   {
     id: "4d9d5342",
@@ -55,6 +55,6 @@ export const properties = [
     status: "Existing",
     office_space: "5 978 m²",
     favorite: false,
-    image: "office4"
+    image: "office-4.jpg"
   }
 ];
