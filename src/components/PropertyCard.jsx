@@ -21,13 +21,13 @@ const PropertyCard = ({ property }) => {
   return (
     <div className={classes.property}>
       <div className={classes.propertyImage}>
-        <Link to="#">
+        <Link to={`/property/${property.id}`}>
           <img src={Images[property.image]} alt="" />
         </Link>
       </div>
       <div className={classes.propertyContainer}>
         <div className={classes.propertyContent}>
-          <Link to="#">
+          <Link to={`/property/${property.id}`}>
             <div className={classes.propertyName}> {property.name} </div>
           </Link>
           <div className={`${classes.propertyLocation} text-muted text-14`}>
@@ -45,13 +45,13 @@ const PropertyCard = ({ property }) => {
           </div>
           <p className={classes.propertyActionsStatus}>
             <div>
-              <div class="text-muted">Status: </div>
+              <div className="text-muted">Status: </div>
               <span className="text-red font-500">{property.status}</span>
             </div>
           </p>
           <p className={classes.propertyActionsStatus}>
             <div>
-              <div class="text-muted">Office Space: </div>
+              <div className="text-muted">Office Space: </div>
               <span className="text-red font-500">{property.office_space}</span>
             </div>
           </p>
