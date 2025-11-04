@@ -1,16 +1,89 @@
-# React + Vite
+# Terra Casa JLLT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight React app (Vite) that showcases a list of commercial properties with clean cards and a detail route scaffold. Built for quick prototyping of property discovery UX.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- React Router 7
+- Vite 7
+- ESLint 9
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Prerequisites: Node.js 18+ and pnpm installed globally.
 
-## Expanding the ESLint configuration
+Install dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+pnpm install
+```
+
+Start the dev server:
+
+```bash
+pnpm dev
+```
+
+Build for production:
+
+```bash
+pnpm build
+```
+
+Preview the production build locally:
+
+```bash
+pnpm preview
+```
+
+If you prefer npm:
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
+
+## Features
+
+- Property listing rendered from static data (`src/data/properties.js`)
+- Card UI with image, location, description, status, office space
+- Responsive layout via CSS Modules and global utility classes
+- Router-based navigation with a detail page scaffold (`/property/:id`)
+
+## Project structure
+
+```text
+terra-casa-jllt/
+├─ index.html
+├─ package.json
+├─ src/
+│  ├─ App.jsx                # Router configuration
+│  ├─ main.jsx               # App bootstrap
+│  ├─ components/
+│  │  ├─ PropertyCard.jsx
+│  │  └─ PropertyList.jsx
+│  ├─ pages/
+│  │  └─ PropertyDetail.jsx
+│  ├─ data/
+│  │  └─ properties.js       # Sample dataset
+│  ├─ styles/
+│  │  ├─ global.css
+│  │  └─ PropertyCard.module.css
+│  └─ assets/                # Images & icons
+└─ vite.config.js
+```
+
+## Available scripts
+
+- `pnpm dev`: start dev server
+- `pnpm build`: production build
+- `pnpm preview`: preview built app
+- `pnpm lint`: run ESLint
+
+## Notes
+
+- The detail page currently contains a basic scaffold; extend it to show full property information based on `id`.
+- Images are stored locally under `src/assets/images/`.
